@@ -30,8 +30,6 @@ export class TodoFormComponent implements OnInit, OnChanges {
   }
 
   ngOnInit() {
-    console.log(this.addedItemNames);
-    console.log(this.addedItemNames.length);
   }
 
   ngOnChanges() {
@@ -40,13 +38,10 @@ export class TodoFormComponent implements OnInit, OnChanges {
 
   submit(event) {
     event.preventDefault();
-    console.log(this.addItemForm.controls['itemName'].value);
     let addedItemName: string;
     this.noItems = false;
     addedItemName = this.addItemForm.get('itemName').value;
     this.addedItemNames.push(addedItemName);
-    console.log(addedItemName);
-    console.log(this.addedItemNames);
     // localStorage.setItem('itemNames', JSON.stringify(this.addedItemNames));
     this.addItemForm.reset();
   }
@@ -59,23 +54,13 @@ export class TodoFormComponent implements OnInit, OnChanges {
     }
   }
 
-  // openEdit(item) {
-  //   console.log(item);
-  //   this.editForm.controls['editName'].setValue(item);
-  // }
-
-  // saveEditedName() {
-  //   console.log(this.editForm.controls['editName'].value);
-  // }
-
   deleteItem(index) {
-    console.log(index);
     this.addedItemNames.splice(index, 1);
     if (this.addedItemNames.length < 1) {
       this.noItems = true;
+    } else {
+      this.noItems = false;
     }
-    this.noItems = false;
-
   }
 
 }

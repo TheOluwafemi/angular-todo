@@ -1,6 +1,6 @@
 <div class="row formList">
 
-  <div class="col">
+  <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
     <form [formGroup] = 'addItemForm' (ngSubmit) = 'submit($event)'>
 
       <legend class="uk-legend">Add Item</legend>
@@ -14,7 +14,7 @@
     </form>
   </div>
 
-  <div class="col">
+  <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
     <div class="list">
 
       <legend class="uk-legend">Item List</legend>
@@ -24,7 +24,7 @@
           {{item}} <a uk-icon="icon: trash" (click)="deleteItem(i)"></a></li>
       </ul>
     
-      <p *ngIf="noItems">Add a new item in the form and click 'Add'</p>
+      <p *ngIf="noItems" style="color: #3A4499;">Enter a new item in the form and click 'Add'</p>
       
     </div>
   </div>

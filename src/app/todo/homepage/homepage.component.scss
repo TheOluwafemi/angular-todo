@@ -24,3 +24,12 @@
     text-align: center;
 }
 
+@media only screen and (max-width: 600px) {
+    app-sidebar {
+     display: none;
+    }
+
+    .main {
+        margin-left: 0 !important;
+    }
+  }
