@@ -1,0 +1,32 @@
+<div class="row formList">
+
+  <div class="col">
+    <form [formGroup] = 'addItemForm' (ngSubmit) = 'submit($event)'>
+
+      <legend class="uk-legend">Add Item</legend>
+
+      <div class="uk-margin">
+        <input class="uk-input" type="text" placeholder="Item name here..." formControlName="itemName">
+      </div>
+
+      <button class="uk-button uk-button-primary" type="submit" [disabled] = !addItemForm.valid>ADD</button>
+
+    </form>
+  </div>
+
+  <div class="col">
+    <div class="list">
+
+      <legend class="uk-legend">Item List</legend>
+    
+      <ul class="uk-list uk-list-striped" *ngIf="!noItems">
+        <li *ngFor="let item of addedItemNames; let i = index"><input class="uk-checkbox" type="checkbox">&nbsp;
+          {{item}} <a uk-icon="icon: trash" (click)="deleteItem(i)"></a></li>
+      </ul>
+    
+      <p *ngIf="noItems">Add a new item in the form and click 'Add'</p>
+      
+    </div>
+  </div>
+  
+</div>

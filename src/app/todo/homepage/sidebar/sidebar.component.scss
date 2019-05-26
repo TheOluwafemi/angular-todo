@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+.sidenav {
+    font-family: 'Poppins' !important;
+    background: url(../../../../assets/images/sidebar.png);
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+.greeting {
+    background: #FD6057;
+    color: white !important;
+    padding: .5em;
+    text-align: center;
+    border-radius: 4px;
+    // margin-left: -20px;
+}
+
+.greeting h5 {
+
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px;
+    margin-top: 4.5em;  
+    object-fit: cover;
+    object-position: center right;
+}
+
+.menu {
+    margin-top: 4em;
+}
+
+.menu li {
+    list-style-type: none;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+}
+  
+.menu a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    // font-size: 25px;
+    color: #FFFFFF;
+    display: block;
+}
+  
+.menu a:hover {
+    color: #f1f1f1;
+}
+  
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+  
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

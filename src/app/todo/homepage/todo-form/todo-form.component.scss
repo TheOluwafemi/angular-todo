@@ -1,0 +1,29 @@
+.formList {
+    margin-top: 103px;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    color: #FD6057;
+}
+
+form {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.uk-button {
+    background: #3A4499;
+}
+
+
+ul a {
+    margin-right: .4em;
+    margin-left: .4em;
+    float: right;
+}
+
+input[type=checkbox]:checked + li {
+    color:red;
+    text-decoration: line-through;
+} /*This is the MDN spec for doing this*/  
